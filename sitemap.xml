@@ -681,6 +681,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.run.ai/developer/researcher-rest-api/rest/</loc>
+         <lastmod>2021-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.run.ai/home/components/</loc>
          <lastmod>2021-11-28</lastmod>
          <changefreq>daily</changefreq>
