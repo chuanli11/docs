@@ -41,11 +41,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.run.ai/Researcher/Walkthroughs/walkthrough-elasticity/</loc>
-         <lastmod>2022-03-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.run.ai/Researcher/Walkthroughs/walkthrough-fractions/</loc>
          <lastmod>2022-03-29</lastmod>
          <changefreq>daily</changefreq>
@@ -202,11 +197,6 @@
     </url>
     <url>
          <loc>https://docs.run.ai/Researcher/researcher-library/researcher-library-overview/</loc>
-         <lastmod>2022-03-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.run.ai/Researcher/researcher-library/rl-elasticity/</loc>
          <lastmod>2022-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
