@@ -291,6 +291,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.run.ai/admin/integration/argo-workflows/</loc>
+         <lastmod>2022-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.run.ai/admin/integration/clearml/</loc>
          <lastmod>2022-06-20</lastmod>
          <changefreq>daily</changefreq>
