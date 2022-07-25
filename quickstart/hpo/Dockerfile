@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:1.15.0-gpu-py3
+FROM nvcr.io/nvidia/tensorflow:21.05-tf1-py3
 
 # Install Keras
 RUN pip install Keras==2.2.4
