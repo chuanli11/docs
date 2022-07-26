@@ -4,6 +4,16 @@ import sys
 
 import keras
 
+from keras.callbacks import ModelCheckpoint
+from keras.callbacks import TensorBoard
+import datetime
+import socket
+
+log_dir = "/nfs/logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + "_" + socket.gethostname()
+checkpoints_file = log_dir + "/weights.best.hdf5"
+
+os.makedirs(log_dir + "/ckpt/", exist_ok=True)
+
 # import Run:AI HPO assistance library
 import runai.hpo
 
@@ -72,6 +82,15 @@ class ReportCallback(keras.callbacks.Callback):
             val_acc=float(logs['val_acc']),
         ))
 
+
+# register a 'save checkpoints' callback. Default is every epoch
+checkpoint_callback = ModelCheckpoint(
+    checkpoints_file, monitor='val_acc', 
+    verbose=1, save_best_only=True, mode='max')
+
+# Allow logs to be read from TensorBoard
+tensorboard_callback = TensorBoard(log_dir=log_dir, histogram_freq=0)
+
 model.fit(
     x=x_train,
     y=y_train,
@@ -79,5 +98,5 @@ model.fit(
     epochs=5,
     verbose=1,
     validation_data=(x_test, y_test),
-    callbacks=[ReportCallback()],
+    callbacks=[ReportCallback(), checkpoint_callback, tensorboard_callback],
 )
