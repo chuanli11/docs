@@ -46,8 +46,8 @@ runai.hpo.init(hpo_dir, subdir=subdir)
 # `config` will hold a single value for each parameter
 config = runai.hpo.pick(
     grid=dict(
-        batch_size=[32, 64, 128],
-        lr=[1, 0.1, 0.01, 0.001]),
+        batch_size=[4, 8, 16, 32, 64, 128],
+        lr=[10.0, 5.0, 1.0, 0.5, 0.1, 0.05, 0.01, 0.005, 0.001, 0.0005, 0.0001]),
     strategy=strategy)
 
 (x_train, y_train), (x_test, y_test) = keras.datasets.cifar10.load_data()
